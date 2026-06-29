@@ -1,60 +1,109 @@
-<svg width="980" height="190" viewBox="0 0 980 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="980" height="210" viewBox="0 0 980 210" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <pattern id="dayGrid" width="13" height="13" patternUnits="userSpaceOnUse">
       <rect width="10" height="10" rx="2" fill="#E5E7EB"/>
     </pattern>
-    <linearGradient id="bar" x1="42" y1="0" x2="938" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="remain" x1="0" y1="0" x2="896" y2="0" gradientUnits="userSpaceOnUse">
       <stop stop-color="#22C55E"/>
-      <stop offset=".55" stop-color="#4ADE80"/>
+      <stop offset=".5" stop-color="#4ADE80"/>
       <stop offset="1" stop-color="#16A34A"/>
     </linearGradient>
   </defs>
+
   <style>
-    .cat{animation:walk 8s ease-in-out infinite}
-    .mouth{animation:chomp .48s ease-in-out infinite; transform-origin:86px 60px}
-    .tail{animation:tail 1.2s ease-in-out infinite; transform-origin:80px 52px}
-    .paw{animation:paw .8s ease-in-out infinite}
-    .meal{animation:eat 8s steps(1,end) infinite}
-    .m1{animation-delay:1s}.m2{animation-delay:1.8s}.m3{animation-delay:2.6s}.m4{animation-delay:3.4s}.m5{animation-delay:4.2s}.m6{animation-delay:5s}.m7{animation-delay:5.8s}
-    @keyframes walk{
-      0%{transform:translate(820px,50px) scale(.46)}
-      50%{transform:translate(238px,50px) scale(.46)}
-      100%{transform:translate(820px,50px) scale(.46)}
+    .cat{animation:hunt 12s cubic-bezier(.34,.02,.2,1) infinite}
+    .tail{animation:tail 1s ease-in-out infinite; transform-origin:76px 46px}
+    .mouth{animation:chomp .45s ease-in-out infinite; transform-origin:86px 62px}
+    .paw{animation:paw .7s ease-in-out infinite}
+    .route{stroke-dasharray:7 8; animation:route 12s linear infinite}
+    .target{animation-duration:12s; animation-timing-function:steps(1,end); animation-iteration-count:infinite}
+    .t1{animation-name:e1}.t2{animation-name:e2}.t3{animation-name:e3}.t4{animation-name:e4}.t5{animation-name:e5}.t6{animation-name:e6}.t7{animation-name:e7}.t8{animation-name:e8}.t9{animation-name:e9}.t10{animation-name:e10}.t11{animation-name:e11}.t12{animation-name:e12}.t13{animation-name:e13}.t14{animation-name:e14}
+    .remain{animation:remain 12s steps(14,end) infinite; transform-origin:42px 172px}
+
+    @keyframes hunt{
+      0%,100%{transform:translate(688px,21px) scale(.42)}
+      7%{transform:translate(649px,34px) scale(.42)}
+      14%{transform:translate(610px,47px) scale(.42)}
+      21%{transform:translate(571px,86px) scale(.42)}
+      28%{transform:translate(532px,60px) scale(.42)}
+      35%{transform:translate(493px,21px) scale(.42)}
+      42%{transform:translate(454px,86px) scale(.42)}
+      49%{transform:translate(415px,73px) scale(.42)}
+      56%{transform:translate(376px,34px) scale(.42)}
+      63%{transform:translate(337px,99px) scale(.42)}
+      70%{transform:translate(298px,60px) scale(.42)}
+      77%{transform:translate(259px,21px) scale(.42)}
+      84%{transform:translate(194px,86px) scale(.42)}
+      91%{transform:translate(129px,47px) scale(.42)}
     }
-    @keyframes chomp{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-13deg)}}
-    @keyframes tail{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(14deg)}}
+    @keyframes route{to{stroke-dashoffset:-220}}
+    @keyframes chomp{0%,100%{transform:rotate(0)}50%{transform:rotate(-15deg)}}
+    @keyframes tail{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(15deg)}}
     @keyframes paw{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
-    @keyframes eat{0%,16%{opacity:1}17%,100%{opacity:.16}}
+    @keyframes remain{0%{transform:scaleX(1)}100%{transform:scaleX(.08)}}
+    @keyframes e1{0%,6%{opacity:1}7%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e2{0%,13%{opacity:1}14%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e3{0%,20%{opacity:1}21%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e4{0%,27%{opacity:1}28%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e5{0%,34%{opacity:1}35%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e6{0%,41%{opacity:1}42%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e7{0%,48%{opacity:1}49%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e8{0%,55%{opacity:1}56%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e9{0%,62%{opacity:1}63%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e10{0%,69%{opacity:1}70%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e11{0%,76%{opacity:1}77%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e12{0%,83%{opacity:1}84%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e13{0%,90%{opacity:1}91%,99%{opacity:.14}100%{opacity:1}}
+    @keyframes e14{0%,96%{opacity:1}97%,99%{opacity:.14}100%{opacity:1}}
   </style>
 
-  <rect width="980" height="190" rx="22" fill="#0D1117"/>
-  <rect x="24" y="20" width="932" height="150" rx="18" fill="#111827" stroke="#263241" stroke-width="2"/>
+  <rect width="980" height="210" rx="22" fill="#0D1117"/>
+  <rect x="24" y="20" width="932" height="174" rx="18" fill="#111827" stroke="#263241" stroke-width="2"/>
 
-  <g transform="translate(42 48)">
+  <g transform="translate(42 44)">
     <rect width="676" height="91" fill="url(#dayGrid)" opacity=".95"/>
     <rect x="676" y="0" width="10" height="10" rx="2" fill="#E5E7EB" opacity=".95"/>
 
+    <path class="route" d="M681 5L642 18L603 31L564 70L525 44L486 5L447 70L408 57L369 18L330 83L291 44L252 5L187 70L122 31" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".32"/>
+
     <g fill="#166534" opacity=".82">
-      <rect x="26" y="26" width="10" height="10" rx="2"/>
-      <rect x="65" y="52" width="10" height="10" rx="2"/>
-      <rect x="117" y="13" width="10" height="10" rx="2"/>
-      <rect x="182" y="65" width="10" height="10" rx="2"/>
-      <rect x="260" y="39" width="10" height="10" rx="2"/>
-      <rect x="338" y="0" width="10" height="10" rx="2"/>
-      <rect x="403" y="52" width="10" height="10" rx="2"/>
-      <rect x="481" y="26" width="10" height="10" rx="2"/>
-      <rect x="559" y="65" width="10" height="10" rx="2"/>
-      <rect x="637" y="13" width="10" height="10" rx="2"/>
+      <rect x="13" y="13" width="10" height="10" rx="2"/>
+      <rect x="26" y="65" width="10" height="10" rx="2"/>
+      <rect x="52" y="39" width="10" height="10" rx="2"/>
+      <rect x="78" y="0" width="10" height="10" rx="2"/>
+      <rect x="104" y="78" width="10" height="10" rx="2"/>
+      <rect x="143" y="52" width="10" height="10" rx="2"/>
+      <rect x="169" y="13" width="10" height="10" rx="2"/>
+      <rect x="208" y="39" width="10" height="10" rx="2"/>
+      <rect x="234" y="78" width="10" height="10" rx="2"/>
+      <rect x="273" y="13" width="10" height="10" rx="2"/>
+      <rect x="312" y="65" width="10" height="10" rx="2"/>
+      <rect x="351" y="39" width="10" height="10" rx="2"/>
+      <rect x="377" y="0" width="10" height="10" rx="2"/>
+      <rect x="429" y="26" width="10" height="10" rx="2"/>
+      <rect x="468" y="78" width="10" height="10" rx="2"/>
+      <rect x="507" y="13" width="10" height="10" rx="2"/>
+      <rect x="533" y="52" width="10" height="10" rx="2"/>
+      <rect x="585" y="0" width="10" height="10" rx="2"/>
+      <rect x="624" y="39" width="10" height="10" rx="2"/>
+      <rect x="663" y="65" width="10" height="10" rx="2"/>
     </g>
 
     <g fill="#22C55E">
-      <rect class="meal m1" x="676" y="0" width="10" height="10" rx="2"/>
-      <rect class="meal m2" x="598" y="26" width="10" height="10" rx="2"/>
-      <rect class="meal m3" x="546" y="52" width="10" height="10" rx="2"/>
-      <rect class="meal m4" x="494" y="13" width="10" height="10" rx="2"/>
-      <rect class="meal m5" x="442" y="65" width="10" height="10" rx="2"/>
-      <rect class="meal m6" x="390" y="39" width="10" height="10" rx="2"/>
-      <rect class="meal m7" x="338" y="13" width="10" height="10" rx="2"/>
+      <rect class="target t1" x="676" y="0" width="10" height="10" rx="2"/>
+      <rect class="target t2" x="637" y="13" width="10" height="10" rx="2"/>
+      <rect class="target t3" x="598" y="26" width="10" height="10" rx="2"/>
+      <rect class="target t4" x="559" y="65" width="10" height="10" rx="2"/>
+      <rect class="target t5" x="520" y="39" width="10" height="10" rx="2"/>
+      <rect class="target t6" x="481" y="0" width="10" height="10" rx="2"/>
+      <rect class="target t7" x="442" y="65" width="10" height="10" rx="2"/>
+      <rect class="target t8" x="403" y="52" width="10" height="10" rx="2"/>
+      <rect class="target t9" x="364" y="13" width="10" height="10" rx="2"/>
+      <rect class="target t10" x="325" y="78" width="10" height="10" rx="2"/>
+      <rect class="target t11" x="286" y="39" width="10" height="10" rx="2"/>
+      <rect class="target t12" x="247" y="0" width="10" height="10" rx="2"/>
+      <rect class="target t13" x="182" y="65" width="10" height="10" rx="2"/>
+      <rect class="target t14" x="117" y="26" width="10" height="10" rx="2"/>
     </g>
   </g>
 
@@ -71,6 +120,6 @@
     <ellipse class="paw" cx="70" cy="98" rx="11" ry="7" fill="#F59E0B"/>
   </g>
 
-  <rect x="42" y="150" width="896" height="8" rx="4" fill="#1F2937"/>
-  <rect x="42" y="150" width="720" height="8" rx="4" fill="url(#bar)"/>
+  <rect x="42" y="172" width="896" height="8" rx="4" fill="#1F2937"/>
+  <rect class="remain" x="42" y="172" width="896" height="8" rx="4" fill="url(#remain)"/>
 </svg>
