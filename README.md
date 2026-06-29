@@ -184,7 +184,7 @@
   </p>
 </details>
 
-## Contribution Garden
+## A CAT Eating my Contributions Graph
 
 <p align="center">
   <img src="./assets/cat-contribution.svg" alt="Animated cat collecting contribution blocks" width="100%" />

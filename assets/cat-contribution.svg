@@ -13,7 +13,7 @@
   <style>
     .head,.body{animation:snakePath 13.6s linear infinite}
     .body{filter:drop-shadow(0 2px 0 #78350f)}
-    .b1{animation-delay:-.04s}.b2{animation-delay:-.08s}.b3{animation-delay:-.12s}.b4{animation-delay:-.16s}.b5{animation-delay:-.2s}.b6{animation-delay:-.24s}
+    .b1{animation-delay:-.1s}.b2{animation-delay:-.2s}.b3{animation-delay:-.3s}.b4{animation-delay:-.4s}.b5{animation-delay:-.5s}.b6{animation-delay:-.6s}
     .mouth{animation:chomp .42s ease-in-out infinite; transform-origin:17px 0}
     .tail-tip{animation:tailTip .7s ease-in-out infinite; transform-origin:-7px 0}
     .route{stroke-dasharray:7 8; animation:routeMove 13.6s linear infinite}
@@ -23,23 +23,23 @@
     .pulse{animation:pulse 1.4s ease-in-out infinite}
 
     @keyframes snakePath{
-      0%,100%{transform:translate(684px,53px)}
-      6%{transform:translate(619px,53px)}
-      12%{transform:translate(619px,92px)}
-      18%{transform:translate(541px,92px)}
-      24%{transform:translate(541px,66px)}
-      30%{transform:translate(450px,66px)}
-      36%{transform:translate(450px,131px)}
-      42%{transform:translate(372px,131px)}
-      48%{transform:translate(372px,105px)}
-      54%{transform:translate(294px,105px)}
-      60%{transform:translate(294px,66px)}
-      66%{transform:translate(229px,66px)}
-      72%{transform:translate(229px,118px)}
-      78%{transform:translate(151px,118px)}
-      84%{transform:translate(151px,79px)}
-      90%{transform:translate(86px,79px)}
-      96%{transform:translate(86px,53px)}
+      0%,100%{transform:translate(619px,53px)}
+      6%{transform:translate(619px,92px)}
+      12%{transform:translate(541px,92px)}
+      18%{transform:translate(541px,66px)}
+      24%{transform:translate(450px,66px)}
+      30%{transform:translate(450px,131px)}
+      36%{transform:translate(372px,131px)}
+      42%{transform:translate(372px,105px)}
+      48%{transform:translate(294px,105px)}
+      54%{transform:translate(294px,66px)}
+      60%{transform:translate(229px,66px)}
+      66%{transform:translate(229px,118px)}
+      72%{transform:translate(151px,118px)}
+      78%{transform:translate(151px,79px)}
+      84%{transform:translate(86px,79px)}
+      90%{transform:translate(86px,53px)}
+      96%{transform:translate(619px,53px)}
     }
     @keyframes routeMove{to{stroke-dashoffset:-260}}
     @keyframes chomp{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg)}}
@@ -47,22 +47,22 @@
     @keyframes remaining{0%{transform:scaleX(1)}100%{transform:scaleX(.08)}}
     @keyframes pulse{0%,100%{opacity:.65}50%{opacity:1}}
 
-    @keyframes e1{0%,5%{opacity:1}6%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e2{0%,11%{opacity:1}12%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e3{0%,17%{opacity:1}18%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e4{0%,23%{opacity:1}24%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e5{0%,29%{opacity:1}30%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e6{0%,35%{opacity:1}36%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e7{0%,41%{opacity:1}42%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e8{0%,47%{opacity:1}48%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e9{0%,53%{opacity:1}54%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e10{0%,59%{opacity:1}60%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e11{0%,65%{opacity:1}66%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e12{0%,71%{opacity:1}72%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e13{0%,77%{opacity:1}78%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e14{0%,83%{opacity:1}84%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e15{0%,89%{opacity:1}90%,99%{opacity:0}100%{opacity:1}}
-    @keyframes e16{0%,95%{opacity:1}96%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e1{0%,5%{fill:#22C55E}6%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e2{0%,11%{fill:#22C55E}12%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e3{0%,17%{fill:#22C55E}18%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e4{0%,23%{fill:#22C55E}24%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e5{0%,29%{fill:#22C55E}30%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e6{0%,35%{fill:#22C55E}36%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e7{0%,41%{fill:#22C55E}42%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e8{0%,47%{fill:#22C55E}48%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e9{0%,53%{fill:#22C55E}54%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e10{0%,59%{fill:#22C55E}60%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e11{0%,65%{fill:#22C55E}66%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e12{0%,71%{fill:#22C55E}72%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e13{0%,77%{fill:#22C55E}78%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e14{0%,83%{fill:#22C55E}84%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e15{0%,89%{fill:#22C55E}90%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e16{0%,95%{fill:#22C55E}96%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
   </style>
 
   <rect width="980" height="220" rx="22" fill="#0D1117"/>
@@ -83,25 +83,25 @@
       <rect x="494" y="13" width="10" height="10" rx="2"/><rect x="494" y="26" width="10" height="10" rx="2"/><rect x="494" y="39" width="10" height="10" rx="2"/><rect x="494" y="78" width="10" height="10" rx="2"/>
     </g>
 
-    <path class="route" d="M642 5H577V44H499V18H408V83H330V57H252V18H187V70H109V31H44V5H642" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".38"/>
+    <path class="route" d="M577 5V44H499V18H408V83H330V57H252V18H187V70H109V31H44V5H577" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".38"/>
 
     <g fill="#22C55E">
-      <rect class="target t1 pulse" x="572" y="0" width="10" height="10" rx="2"/>
-      <rect class="target t2 pulse" x="572" y="39" width="10" height="10" rx="2"/>
-      <rect class="target t3 pulse" x="494" y="39" width="10" height="10" rx="2"/>
-      <rect class="target t4 pulse" x="494" y="13" width="10" height="10" rx="2"/>
-      <rect class="target t5 pulse" x="403" y="13" width="10" height="10" rx="2"/>
-      <rect class="target t6 pulse" x="403" y="78" width="10" height="10" rx="2"/>
-      <rect class="target t7 pulse" x="325" y="78" width="10" height="10" rx="2"/>
-      <rect class="target t8 pulse" x="325" y="52" width="10" height="10" rx="2"/>
-      <rect class="target t9 pulse" x="247" y="52" width="10" height="10" rx="2"/>
-      <rect class="target t10 pulse" x="247" y="13" width="10" height="10" rx="2"/>
-      <rect class="target t11 pulse" x="182" y="13" width="10" height="10" rx="2"/>
-      <rect class="target t12 pulse" x="182" y="65" width="10" height="10" rx="2"/>
-      <rect class="target t13 pulse" x="104" y="65" width="10" height="10" rx="2"/>
-      <rect class="target t14 pulse" x="104" y="26" width="10" height="10" rx="2"/>
-      <rect class="target t15 pulse" x="39" y="26" width="10" height="10" rx="2"/>
-      <rect class="target t16 pulse" x="39" y="0" width="10" height="10" rx="2"/>
+      <rect class="target t1" x="572" y="0" width="10" height="10" rx="2"/>
+      <rect class="target t2" x="572" y="39" width="10" height="10" rx="2"/>
+      <rect class="target t3" x="494" y="39" width="10" height="10" rx="2"/>
+      <rect class="target t4" x="494" y="13" width="10" height="10" rx="2"/>
+      <rect class="target t5" x="403" y="13" width="10" height="10" rx="2"/>
+      <rect class="target t6" x="403" y="78" width="10" height="10" rx="2"/>
+      <rect class="target t7" x="325" y="78" width="10" height="10" rx="2"/>
+      <rect class="target t8" x="325" y="52" width="10" height="10" rx="2"/>
+      <rect class="target t9" x="247" y="52" width="10" height="10" rx="2"/>
+      <rect class="target t10" x="247" y="13" width="10" height="10" rx="2"/>
+      <rect class="target t11" x="182" y="13" width="10" height="10" rx="2"/>
+      <rect class="target t12" x="182" y="65" width="10" height="10" rx="2"/>
+      <rect class="target t13" x="104" y="65" width="10" height="10" rx="2"/>
+      <rect class="target t14" x="104" y="26" width="10" height="10" rx="2"/>
+      <rect class="target t15" x="39" y="26" width="10" height="10" rx="2"/>
+      <rect class="target t16" x="39" y="0" width="10" height="10" rx="2"/>
     </g>
   </g>
 
