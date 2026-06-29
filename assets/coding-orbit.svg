@@ -1,0 +1,22 @@
+<svg width="520" height="340" viewBox="0 0 520 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .screen{animation: glow 2.4s ease-in-out infinite}
+    .dot1{animation: orbit1 5s linear infinite; transform-origin:260px 160px}
+    .dot2{animation: orbit2 6s linear infinite; transform-origin:260px 160px}
+    .line{animation: pulse 1.8s ease-in-out infinite}
+    @keyframes glow{0%,100%{filter:drop-shadow(0 0 4px #38bdf8)}50%{filter:drop-shadow(0 0 18px #22c55e)}}
+    @keyframes orbit1{to{transform:rotate(360deg)}}
+    @keyframes orbit2{to{transform:rotate(-360deg)}}
+    @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+  </style>
+  <rect width="520" height="340" rx="24" fill="#0D1117"/>
+  <rect x="98" y="82" width="324" height="178" rx="18" fill="#111827" stroke="#334155" stroke-width="4"/>
+  <rect class="screen" x="122" y="106" width="276" height="118" rx="12" fill="#020617" stroke="#38BDF8" stroke-width="3"/>
+  <path class="line" d="M150 138H242M150 166H332M150 194H286" stroke="#22C55E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M188 260H332L354 302H166L188 260Z" fill="#1F2937" stroke="#475569" stroke-width="4"/>
+  <circle class="dot1" cx="260" cy="54" r="12" fill="#38BDF8"/>
+  <circle class="dot1" cx="446" cy="160" r="8" fill="#F59E0B"/>
+  <circle class="dot2" cx="74" cy="160" r="10" fill="#22C55E"/>
+  <circle class="dot2" cx="260" cy="292" r="7" fill="#A78BFA"/>
+  <path d="M260 54C352 54 446 92 446 160C446 228 352 292 260 292C168 292 74 228 74 160C74 92 168 54 260 54Z" stroke="#1E293B" stroke-width="3" stroke-dasharray="10 12"/>
+</svg>

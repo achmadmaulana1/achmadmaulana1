@@ -1,0 +1,17 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .node{animation: node 2s ease-in-out infinite}
+    .wire{stroke-dasharray:12 10; animation: dash 3s linear infinite}
+    .n2{animation-delay:.3s}.n3{animation-delay:.6s}.n4{animation-delay:.9s}.n5{animation-delay:1.2s}
+    @keyframes node{0%,100%{r:12;filter:drop-shadow(0 0 3px #38bdf8)}50%{r:16;filter:drop-shadow(0 0 14px #22c55e)}}
+    @keyframes dash{to{stroke-dashoffset:-90}}
+  </style>
+  <rect width="240" height="240" rx="36" fill="#0D1117"/>
+  <path class="wire" d="M120 42L54 94L78 176L162 176L186 94L120 42Z" stroke="#38BDF8" stroke-width="5"/>
+  <path class="wire" d="M54 94H186M78 176L120 42L162 176" stroke="#22C55E" stroke-width="4" opacity=".75"/>
+  <circle class="node" cx="120" cy="42" r="12" fill="#38BDF8"/>
+  <circle class="node n2" cx="54" cy="94" r="12" fill="#22C55E"/>
+  <circle class="node n3" cx="186" cy="94" r="12" fill="#F59E0B"/>
+  <circle class="node n4" cx="78" cy="176" r="12" fill="#A78BFA"/>
+  <circle class="node n5" cx="162" cy="176" r="12" fill="#EF4444"/>
+</svg>
