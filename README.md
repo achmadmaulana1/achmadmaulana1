@@ -176,8 +176,11 @@
   <summary><b>GitHub Profile Stats</b></summary>
   <br />
   <p align="center">
-    <img height="170" src="https://github-readme-stats.vercel.app/api?username=achmadmaulana1&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github" alt="GitHub profile stats" />
-    <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=achmadmaulana1&layout=compact&theme=github_dark&hide_border=true" alt="Top languages" />
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=achmadmaulana1&theme=github_dark" alt="GitHub profile details" />
+  </p>
+  <p align="center">
+    <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=achmadmaulana1&theme=github_dark" alt="GitHub stats" />
+    <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=achmadmaulana1&theme=github_dark" alt="Repository languages" />
   </p>
 </details>
 
@@ -189,13 +192,13 @@
 
 ---
 
-## Portfolio Direction
+## Current Focus
 
-- Build fullstack projects with real workflows, not only landing pages.
-- Keep improving README files with screenshots, architecture, stack, setup commands, and feature lists.
-- Add live demo links when the app is deployed.
-- Pin the strongest repositories: AI, cybersecurity, network monitoring, crisis intelligence, and polished frontend apps.
-- Keep private keys, `.env`, database files, tokens, and unreleased business logic out of public repositories.
+- Fullstack apps with real data flow, authentication, dashboards, and clean interaction.
+- AI-assisted systems for education, monitoring, risk analysis, and decision support.
+- Network engineering labs, cybersecurity practice, and infrastructure documentation.
+- Public repositories as learning records, portfolio proof, and project evolution.
+- Private files stay private: environment keys, local databases, tokens, and unreleased logic.
 
 <div align="center">
   <b>Learning across software, networks, AI, and security. One project at a time.</b>
