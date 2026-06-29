@@ -11,9 +11,9 @@
   </defs>
 
   <style>
-    .head,.body{animation:snakePath 13.6s linear infinite}
+    .head,.body{animation:snakePath 13.6s linear infinite, runnerFade 13.6s linear infinite}
     .body{filter:drop-shadow(0 2px 0 #78350f)}
-    .b1{animation-delay:-.1s}.b2{animation-delay:-.2s}.b3{animation-delay:-.3s}.b4{animation-delay:-.4s}.b5{animation-delay:-.5s}.b6{animation-delay:-.6s}
+    .b1{animation-delay:-13.44s,-13.44s}.b2{animation-delay:-13.28s,-13.28s}.b3{animation-delay:-13.12s,-13.12s}.b4{animation-delay:-12.96s,-12.96s}.b5{animation-delay:-12.8s,-12.8s}.b6{animation-delay:-12.64s,-12.64s}
     .mouth{animation:chomp .42s ease-in-out infinite; transform-origin:17px 0}
     .tail-tip{animation:tailTip .7s ease-in-out infinite; transform-origin:-7px 0}
     .route{stroke-dasharray:7 8; animation:routeMove 13.6s linear infinite}
@@ -39,7 +39,13 @@
       78%{transform:translate(151px,79px)}
       84%{transform:translate(86px,79px)}
       90%{transform:translate(86px,53px)}
-      96%{transform:translate(619px,53px)}
+      95%{transform:translate(86px,53px)}
+      96%,100%{transform:translate(619px,53px)}
+    }
+    @keyframes runnerFade{
+      0%,94.9%{opacity:1}
+      95%,99.5%{opacity:0}
+      100%{opacity:1}
     }
     @keyframes routeMove{to{stroke-dashoffset:-260}}
     @keyframes chomp{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg)}}
@@ -47,22 +53,22 @@
     @keyframes remaining{0%{transform:scaleX(1)}100%{transform:scaleX(.08)}}
     @keyframes pulse{0%,100%{opacity:.65}50%{opacity:1}}
 
-    @keyframes e1{0%,5%{fill:#22C55E}6%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e2{0%,11%{fill:#22C55E}12%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e3{0%,17%{fill:#22C55E}18%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e4{0%,23%{fill:#22C55E}24%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e5{0%,29%{fill:#22C55E}30%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e6{0%,35%{fill:#22C55E}36%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e7{0%,41%{fill:#22C55E}42%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e8{0%,47%{fill:#22C55E}48%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e9{0%,53%{fill:#22C55E}54%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e10{0%,59%{fill:#22C55E}60%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e11{0%,65%{fill:#22C55E}66%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e12{0%,71%{fill:#22C55E}72%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e13{0%,77%{fill:#22C55E}78%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e14{0%,83%{fill:#22C55E}84%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e15{0%,89%{fill:#22C55E}90%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e16{0%,95%{fill:#22C55E}96%,99%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e1{0%,5.8%{fill:#22C55E}6%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e2{0%,11.8%{fill:#22C55E}12%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e3{0%,17.8%{fill:#22C55E}18%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e4{0%,23.8%{fill:#22C55E}24%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e5{0%,29.8%{fill:#22C55E}30%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e6{0%,35.8%{fill:#22C55E}36%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e7{0%,41.8%{fill:#22C55E}42%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e8{0%,47.8%{fill:#22C55E}48%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e9{0%,53.8%{fill:#22C55E}54%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e10{0%,59.8%{fill:#22C55E}60%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e11{0%,65.8%{fill:#22C55E}66%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e12{0%,71.8%{fill:#22C55E}72%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e13{0%,77.8%{fill:#22C55E}78%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e14{0%,83.8%{fill:#22C55E}84%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e15{0%,89.8%{fill:#22C55E}90%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
+    @keyframes e16{0%,94.8%{fill:#22C55E}95%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
   </style>
 
   <rect width="980" height="220" rx="22" fill="#0D1117"/>
