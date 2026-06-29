@@ -184,10 +184,10 @@
   </p>
 </details>
 
-## Contribution Motion
+## Contribution Garden
 
 <p align="center">
-  <img src="./assets/cat-contribution.svg" alt="Animated cat eating contribution blocks" width="100%" />
+  <img src="./assets/cat-contribution.svg" alt="Animated cat collecting contribution blocks" width="100%" />
 </p>
 
 ---

@@ -13,7 +13,7 @@
   <style>
     .head,.body{animation:snakePath 13.6s linear infinite}
     .body{filter:drop-shadow(0 2px 0 #78350f)}
-    .b1{animation-delay:-12.8s}.b2{animation-delay:-12s}.b3{animation-delay:-11.2s}.b4{animation-delay:-10.4s}.b5{animation-delay:-9.6s}.b6{animation-delay:-8.8s}
+    .b1{animation-delay:-.04s}.b2{animation-delay:-.08s}.b3{animation-delay:-.12s}.b4{animation-delay:-.16s}.b5{animation-delay:-.2s}.b6{animation-delay:-.24s}
     .mouth{animation:chomp .42s ease-in-out infinite; transform-origin:17px 0}
     .tail-tip{animation:tailTip .7s ease-in-out infinite; transform-origin:-7px 0}
     .route{stroke-dasharray:7 8; animation:routeMove 13.6s linear infinite}
@@ -47,22 +47,22 @@
     @keyframes remaining{0%{transform:scaleX(1)}100%{transform:scaleX(.08)}}
     @keyframes pulse{0%,100%{opacity:.65}50%{opacity:1}}
 
-    @keyframes e1{0%,5%{opacity:1}6%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e2{0%,11%{opacity:1}12%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e3{0%,17%{opacity:1}18%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e4{0%,23%{opacity:1}24%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e5{0%,29%{opacity:1}30%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e6{0%,35%{opacity:1}36%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e7{0%,41%{opacity:1}42%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e8{0%,47%{opacity:1}48%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e9{0%,53%{opacity:1}54%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e10{0%,59%{opacity:1}60%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e11{0%,65%{opacity:1}66%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e12{0%,71%{opacity:1}72%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e13{0%,77%{opacity:1}78%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e14{0%,83%{opacity:1}84%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e15{0%,89%{opacity:1}90%,99%{opacity:.12}100%{opacity:1}}
-    @keyframes e16{0%,95%{opacity:1}96%,99%{opacity:.12}100%{opacity:1}}
+    @keyframes e1{0%,5%{opacity:1}6%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e2{0%,11%{opacity:1}12%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e3{0%,17%{opacity:1}18%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e4{0%,23%{opacity:1}24%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e5{0%,29%{opacity:1}30%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e6{0%,35%{opacity:1}36%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e7{0%,41%{opacity:1}42%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e8{0%,47%{opacity:1}48%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e9{0%,53%{opacity:1}54%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e10{0%,59%{opacity:1}60%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e11{0%,65%{opacity:1}66%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e12{0%,71%{opacity:1}72%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e13{0%,77%{opacity:1}78%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e14{0%,83%{opacity:1}84%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e15{0%,89%{opacity:1}90%,99%{opacity:0}100%{opacity:1}}
+    @keyframes e16{0%,95%{opacity:1}96%,99%{opacity:0}100%{opacity:1}}
   </style>
 
   <rect width="980" height="220" rx="22" fill="#0D1117"/>
