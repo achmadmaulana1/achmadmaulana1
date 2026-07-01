@@ -1,90 +1,8 @@
 <svg viewBox="-16 -32 880 192" width="880" height="192" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    :root{
-      --cb:#1b1f230a;
-      --ce:#ebedf0;
-      --c1:#9be9a8;
-      --c2:#40c463;
-      --c3:#30a14e;
-      --c4:#216e39;
-      --cat:#fbbf24;
-      --cat2:#f59e0b;
-      --line:#22c55e;
-      --ink:#1f2937;
-    }
-    .c{shape-rendering:geometricPrecision;fill:var(--ce);stroke-width:1px;stroke:var(--cb);width:12px;height:12px}
-    .g1{fill:var(--c1)}.g2{fill:var(--c2)}.g3{fill:var(--c3)}.g4{fill:var(--c4)}
-    .target{animation-duration:36000ms;animation-timing-function:steps(1,end);animation-iteration-count:infinite}
-    .t1{animation-name:e1}.t2{animation-name:e2}.t3{animation-name:e3}.t4{animation-name:e4}.t5{animation-name:e5}.t6{animation-name:e6}.t7{animation-name:e7}.t8{animation-name:e8}.t9{animation-name:e9}.t10{animation-name:e10}.t11{animation-name:e11}.t12{animation-name:e12}.t13{animation-name:e13}.t14{animation-name:e14}.t15{animation-name:e15}.t16{animation-name:e16}.t17{animation-name:e17}.t18{animation-name:e18}.t19{animation-name:e19}.t20{animation-name:e20}.t21{animation-name:e21}.t22{animation-name:e22}.t23{animation-name:e23}.t24{animation-name:e24}
-    @keyframes e1{0%,3.9%{fill:var(--c2)}4%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
-    @keyframes e2{0%,7.9%{fill:var(--c3)}8%,99.4%{fill:var(--ce)}100%{fill:var(--c3)}}
-    @keyframes e3{0%,11.9%{fill:var(--c1)}12%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
-    @keyframes e4{0%,15.9%{fill:var(--c4)}16%,99.4%{fill:var(--ce)}100%{fill:var(--c4)}}
-    @keyframes e5{0%,19.9%{fill:var(--c2)}20%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
-    @keyframes e6{0%,23.9%{fill:var(--c1)}24%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
-    @keyframes e7{0%,27.9%{fill:var(--c3)}28%,99.4%{fill:var(--ce)}100%{fill:var(--c3)}}
-    @keyframes e8{0%,31.9%{fill:var(--c2)}32%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
-    @keyframes e9{0%,35.9%{fill:var(--c4)}36%,99.4%{fill:var(--ce)}100%{fill:var(--c4)}}
-    @keyframes e10{0%,39.9%{fill:var(--c1)}40%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
-    @keyframes e11{0%,43.9%{fill:var(--c2)}44%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
-    @keyframes e12{0%,47.9%{fill:var(--c3)}48%,99.4%{fill:var(--ce)}100%{fill:var(--c3)}}
-    @keyframes e13{0%,51.9%{fill:var(--c1)}52%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
-    @keyframes e14{0%,55.9%{fill:var(--c4)}56%,99.4%{fill:var(--ce)}100%{fill:var(--c4)}}
-    @keyframes e15{0%,59.9%{fill:var(--c2)}60%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
-    @keyframes e16{0%,63.9%{fill:var(--c3)}64%,99.4%{fill:var(--ce)}100%{fill:var(--c3)}}
-    @keyframes e17{0%,67.9%{fill:var(--c1)}68%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
-    @keyframes e18{0%,71.9%{fill:var(--c2)}72%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
-    @keyframes e19{0%,75.9%{fill:var(--c4)}76%,99.4%{fill:var(--ce)}100%{fill:var(--c4)}}
-    @keyframes e20{0%,79.9%{fill:var(--c1)}80%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
-    @keyframes e21{0%,83.9%{fill:var(--c2)}84%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
-    @keyframes e22{0%,87.9%{fill:var(--c3)}88%,99.4%{fill:var(--ce)}100%{fill:var(--c3)}}
-    @keyframes e23{0%,91.9%{fill:var(--c1)}92%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
-    @keyframes e24{0%,95.9%{fill:var(--c4)}96%,99.4%{fill:var(--ce)}100%{fill:var(--c4)}}
-
-    .runner{animation:catPath 36000ms linear infinite, runnerFade 36000ms linear infinite}
-    .s1{animation-delay:260ms,260ms}.s2{animation-delay:520ms,520ms}.s3{animation-delay:780ms,780ms}.s4{animation-delay:1040ms,1040ms}
-    .tail{animation:tail 850ms ease-in-out infinite;transform-origin:-8px 0}
-    .mouth{animation:chomp 460ms ease-in-out infinite;transform-origin:17px 0}
-    .bar{animation:bar 36000ms linear infinite;transform-origin:0 0}
-    .trail{stroke-dasharray:6 10;animation:trail 36000ms linear infinite}
-    @keyframes catPath{
-      0%,100%{transform:translate(804px,48px)}
-      4%{transform:translate(752px,48px)}
-      8%{transform:translate(752px,96px)}
-      12%{transform:translate(672px,96px)}
-      16%{transform:translate(672px,32px)}
-      20%{transform:translate(592px,32px)}
-      24%{transform:translate(592px,80px)}
-      28%{transform:translate(528px,80px)}
-      32%{transform:translate(528px,16px)}
-      36%{transform:translate(448px,16px)}
-      40%{transform:translate(448px,96px)}
-      44%{transform:translate(368px,96px)}
-      48%{transform:translate(368px,48px)}
-      52%{transform:translate(288px,48px)}
-      56%{transform:translate(288px,112px)}
-      60%{transform:translate(208px,112px)}
-      64%{transform:translate(208px,32px)}
-      68%{transform:translate(128px,32px)}
-      72%{transform:translate(128px,80px)}
-      76%{transform:translate(48px,80px)}
-      80%{transform:translate(48px,16px)}
-      84%{transform:translate(160px,16px)}
-      88%{transform:translate(160px,64px)}
-      92%{transform:translate(320px,64px)}
-      96%{transform:translate(320px,0px)}
-      98%{transform:translate(804px,0px)}
-    }
-    @keyframes runnerFade{0%,96.3%{opacity:1}97%,99.4%{opacity:0}100%{opacity:1}}
-    @keyframes tail{0%,100%{transform:rotate(-16deg)}50%{transform:rotate(18deg)}}
-    @keyframes chomp{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg)}}
-    @keyframes bar{0%{transform:scaleX(1)}96%{transform:scaleX(.08)}100%{transform:scaleX(1)}}
-    @keyframes trail{to{stroke-dashoffset:-260}}
-  </style>
-
   <defs>
-    <pattern id="snkGrid" width="16" height="16" patternUnits="userSpaceOnUse">
-      <rect class="c" x="2" y="2" rx="2" ry="2"/>
+    <path id="catPath" d="M832 0H0V16H832V32H0V48H832V64H0V80H832V96H0"/>
+    <pattern id="baseGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect x="2" y="2" width="12" height="12" rx="2" ry="2" fill="#ebedf0" stroke="#1b1f230a" stroke-width="1"/>
     </pattern>
     <linearGradient id="lifeBar" x1="0" y1="0" x2="848" y2="0" gradientUnits="userSpaceOnUse">
       <stop stop-color="#216e39"/>
@@ -93,49 +11,102 @@
     </linearGradient>
   </defs>
 
-  <rect x="0" y="0" width="848" height="112" fill="url(#snkGrid)"/>
+  <style>
+    :root{
+      --ce:#ebedf0;
+      --c1:#9be9a8;
+      --c2:#40c463;
+      --c3:#30a14e;
+      --c4:#216e39;
+      --cat:#fbbf24;
+      --cat2:#f59e0b;
+      --ink:#1f2937;
+    }
+    .green-route{
+      fill:none;
+      stroke:var(--c2);
+      stroke-width:12;
+      stroke-linecap:butt;
+      stroke-linejoin:miter;
+      stroke-dasharray:12 4;
+      shape-rendering:geometricPrecision;
+    }
+    .green-route.dark{
+      stroke:var(--c4);
+      stroke-dasharray:12 52;
+      stroke-dashoffset:32;
+      opacity:.72;
+    }
+    .green-route.mid{
+      stroke:var(--c3);
+      stroke-dasharray:12 36;
+      stroke-dashoffset:80;
+      opacity:.86;
+    }
+    .eat-mask{
+      fill:none;
+      stroke:var(--ce);
+      stroke-width:14;
+      stroke-linecap:butt;
+      stroke-linejoin:miter;
+      pathLength:1000;
+      stroke-dasharray:0 1000;
+      animation:eatAll 36000ms linear infinite;
+    }
+    .runner{
+      offset-path:path("M832 0H0V16H832V32H0V48H832V64H0V80H832V96H0");
+      offset-rotate:auto;
+      animation:runPath 36000ms linear infinite, runnerFade 36000ms linear infinite;
+    }
+    .body1{animation-delay:280ms,280ms}
+    .body2{animation-delay:560ms,560ms}
+    .body3{animation-delay:840ms,840ms}
+    .tail{animation:tail 850ms ease-in-out infinite;transform-origin:-8px 0}
+    .mouth{animation:chomp 460ms ease-in-out infinite;transform-origin:17px 0}
+    .bar{animation:bar 36000ms linear infinite;transform-origin:0 0}
 
-  <g>
-    <rect class="c g1" x="2" y="2" rx="2" ry="2"/><rect class="c g2" x="18" y="2" rx="2" ry="2"/><rect class="c g1" x="34" y="2" rx="2" ry="2"/><rect class="c" x="50" y="2" rx="2" ry="2"/><rect class="c g3" x="66" y="2" rx="2" ry="2"/><rect class="c" x="82" y="2" rx="2" ry="2"/><rect class="c g1" x="98" y="2" rx="2" ry="2"/><rect class="c g2" x="114" y="2" rx="2" ry="2"/><rect class="c" x="130" y="2" rx="2" ry="2"/><rect class="c g1" x="146" y="2" rx="2" ry="2"/><rect class="c g4" x="162" y="2" rx="2" ry="2"/><rect class="c" x="178" y="2" rx="2" ry="2"/><rect class="c g2" x="194" y="2" rx="2" ry="2"/><rect class="c" x="210" y="2" rx="2" ry="2"/><rect class="c g1" x="226" y="2" rx="2" ry="2"/><rect class="c g3" x="242" y="2" rx="2" ry="2"/><rect class="c g1" x="258" y="2" rx="2" ry="2"/><rect class="c" x="274" y="2" rx="2" ry="2"/><rect class="c g2" x="290" y="2" rx="2" ry="2"/><rect class="c g1" x="306" y="2" rx="2" ry="2"/><rect class="c target t24" x="322" y="2" rx="2" ry="2"/><rect class="c" x="338" y="2" rx="2" ry="2"/><rect class="c g1" x="354" y="2" rx="2" ry="2"/><rect class="c g4" x="370" y="2" rx="2" ry="2"/><rect class="c" x="386" y="2" rx="2" ry="2"/><rect class="c g2" x="402" y="2" rx="2" ry="2"/><rect class="c g1" x="418" y="2" rx="2" ry="2"/><rect class="c" x="434" y="2" rx="2" ry="2"/><rect class="c g3" x="450" y="2" rx="2" ry="2"/><rect class="c" x="466" y="2" rx="2" ry="2"/><rect class="c g1" x="482" y="2" rx="2" ry="2"/><rect class="c g2" x="498" y="2" rx="2" ry="2"/><rect class="c" x="514" y="2" rx="2" ry="2"/><rect class="c g1" x="530" y="2" rx="2" ry="2"/><rect class="c" x="546" y="2" rx="2" ry="2"/><rect class="c g4" x="562" y="2" rx="2" ry="2"/><rect class="c g1" x="578" y="2" rx="2" ry="2"/><rect class="c g2" x="594" y="2" rx="2" ry="2"/><rect class="c" x="610" y="2" rx="2" ry="2"/><rect class="c g1" x="626" y="2" rx="2" ry="2"/><rect class="c g2" x="642" y="2" rx="2" ry="2"/><rect class="c" x="658" y="2" rx="2" ry="2"/><rect class="c g3" x="674" y="2" rx="2" ry="2"/><rect class="c g1" x="690" y="2" rx="2" ry="2"/><rect class="c" x="706" y="2" rx="2" ry="2"/><rect class="c g2" x="722" y="2" rx="2" ry="2"/><rect class="c" x="738" y="2" rx="2" ry="2"/><rect class="c g1" x="754" y="2" rx="2" ry="2"/><rect class="c g3" x="770" y="2" rx="2" ry="2"/><rect class="c g2" x="786" y="2" rx="2" ry="2"/><rect class="c" x="802" y="2" rx="2" ry="2"/><rect class="c g1" x="818" y="2" rx="2" ry="2"/><rect class="c" x="834" y="2" rx="2" ry="2"/>
-    <rect class="c g1" x="2" y="18" rx="2" ry="2"/><rect class="c" x="18" y="18" rx="2" ry="2"/><rect class="c g2" x="34" y="18" rx="2" ry="2"/><rect class="c target t20" x="50" y="18" rx="2" ry="2"/><rect class="c g1" x="66" y="18" rx="2" ry="2"/><rect class="c" x="82" y="18" rx="2" ry="2"/><rect class="c g3" x="98" y="18" rx="2" ry="2"/><rect class="c" x="114" y="18" rx="2" ry="2"/><rect class="c g2" x="130" y="18" rx="2" ry="2"/><rect class="c g1" x="146" y="18" rx="2" ry="2"/><rect class="c" x="162" y="18" rx="2" ry="2"/><rect class="c g2" x="178" y="18" rx="2" ry="2"/><rect class="c target t21" x="162" y="18" rx="2" ry="2"/><rect class="c g1" x="194" y="18" rx="2" ry="2"/><rect class="c" x="210" y="18" rx="2" ry="2"/><rect class="c g2" x="226" y="18" rx="2" ry="2"/><rect class="c g3" x="242" y="18" rx="2" ry="2"/><rect class="c" x="258" y="18" rx="2" ry="2"/><rect class="c g1" x="274" y="18" rx="2" ry="2"/><rect class="c" x="290" y="18" rx="2" ry="2"/><rect class="c g2" x="306" y="18" rx="2" ry="2"/><rect class="c g1" x="322" y="18" rx="2" ry="2"/><rect class="c" x="338" y="18" rx="2" ry="2"/><rect class="c g4" x="354" y="18" rx="2" ry="2"/><rect class="c g2" x="370" y="18" rx="2" ry="2"/><rect class="c" x="386" y="18" rx="2" ry="2"/><rect class="c g1" x="402" y="18" rx="2" ry="2"/><rect class="c" x="418" y="18" rx="2" ry="2"/><rect class="c g2" x="434" y="18" rx="2" ry="2"/><rect class="c g1" x="450" y="18" rx="2" ry="2"/><rect class="c" x="466" y="18" rx="2" ry="2"/><rect class="c g3" x="482" y="18" rx="2" ry="2"/><rect class="c" x="498" y="18" rx="2" ry="2"/><rect class="c g2" x="514" y="18" rx="2" ry="2"/><rect class="c g1" x="530" y="18" rx="2" ry="2"/><rect class="c" x="546" y="18" rx="2" ry="2"/><rect class="c g4" x="562" y="18" rx="2" ry="2"/><rect class="c" x="578" y="18" rx="2" ry="2"/><rect class="c g2" x="594" y="18" rx="2" ry="2"/><rect class="c target t5" x="594" y="18" rx="2" ry="2"/><rect class="c g1" x="610" y="18" rx="2" ry="2"/><rect class="c" x="626" y="18" rx="2" ry="2"/><rect class="c g2" x="642" y="18" rx="2" ry="2"/><rect class="c" x="658" y="18" rx="2" ry="2"/><rect class="c g1" x="674" y="18" rx="2" ry="2"/><rect class="c g3" x="690" y="18" rx="2" ry="2"/><rect class="c" x="706" y="18" rx="2" ry="2"/><rect class="c g2" x="722" y="18" rx="2" ry="2"/><rect class="c" x="738" y="18" rx="2" ry="2"/><rect class="c g1" x="754" y="18" rx="2" ry="2"/><rect class="c g4" x="770" y="18" rx="2" ry="2"/><rect class="c" x="786" y="18" rx="2" ry="2"/><rect class="c g2" x="802" y="18" rx="2" ry="2"/><rect class="c" x="818" y="18" rx="2" ry="2"/><rect class="c g1" x="834" y="18" rx="2" ry="2"/>
-  </g>
+    @keyframes runPath{
+      0%{offset-distance:0%}
+      96%{offset-distance:100%}
+      100%{offset-distance:100%}
+    }
+    @keyframes eatAll{
+      0%{stroke-dasharray:0 1000}
+      96%{stroke-dasharray:1000 0}
+      99.2%{stroke-dasharray:1000 0}
+      100%{stroke-dasharray:0 1000}
+    }
+    @keyframes runnerFade{
+      0%,96.3%{opacity:1}
+      97%,99.2%{opacity:0}
+      100%{opacity:1}
+    }
+    @keyframes bar{
+      0%{transform:scaleX(1)}
+      96%{transform:scaleX(.04)}
+      100%{transform:scaleX(1)}
+    }
+    @keyframes tail{0%,100%{transform:rotate(-16deg)}50%{transform:rotate(18deg)}}
+    @keyframes chomp{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg)}}
+  </style>
 
-  <g>
-    <rect class="c target t1" x="754" y="50" rx="2" ry="2"/>
-    <rect class="c target t2" x="754" y="98" rx="2" ry="2"/>
-    <rect class="c target t3" x="674" y="98" rx="2" ry="2"/>
-    <rect class="c target t4" x="674" y="34" rx="2" ry="2"/>
-    <rect class="c target t5" x="594" y="34" rx="2" ry="2"/>
-    <rect class="c target t6" x="594" y="82" rx="2" ry="2"/>
-    <rect class="c target t7" x="530" y="82" rx="2" ry="2"/>
-    <rect class="c target t8" x="530" y="18" rx="2" ry="2"/>
-    <rect class="c target t9" x="450" y="18" rx="2" ry="2"/>
-    <rect class="c target t10" x="450" y="98" rx="2" ry="2"/>
-    <rect class="c target t11" x="370" y="98" rx="2" ry="2"/>
-    <rect class="c target t12" x="370" y="50" rx="2" ry="2"/>
-    <rect class="c target t13" x="290" y="50" rx="2" ry="2"/>
-    <rect class="c target t14" x="290" y="114" rx="2" ry="2"/>
-    <rect class="c target t15" x="210" y="114" rx="2" ry="2"/>
-    <rect class="c target t16" x="210" y="34" rx="2" ry="2"/>
-    <rect class="c target t17" x="130" y="34" rx="2" ry="2"/>
-    <rect class="c target t18" x="130" y="82" rx="2" ry="2"/>
-    <rect class="c target t19" x="50" y="82" rx="2" ry="2"/>
-    <rect class="c target t20" x="50" y="18" rx="2" ry="2"/>
-    <rect class="c target t21" x="162" y="18" rx="2" ry="2"/>
-    <rect class="c target t22" x="162" y="66" rx="2" ry="2"/>
-    <rect class="c target t23" x="322" y="66" rx="2" ry="2"/>
-    <rect class="c target t24" x="322" y="2" rx="2" ry="2"/>
-  </g>
+  <rect x="0" y="0" width="848" height="112" fill="url(#baseGrid)"/>
 
-  <path class="trail" d="M804 48H752V96H672V32H592V80H528V16H448V96H368V48H288V112H208V32H128V80H48V16H160V64H320V0" fill="none" stroke="var(--line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".32"/>
+  <use href="#catPath" class="green-route"/>
+  <use href="#catPath" class="green-route mid"/>
+  <use href="#catPath" class="green-route dark"/>
+  <use href="#catPath" class="eat-mask"/>
 
-  <rect class="u" height="12" width="848" x="0" y="144" rx="2" fill="#1f2937"/>
+  <rect height="12" width="848" x="0" y="144" rx="2" fill="#1f2937"/>
   <rect class="bar" height="12" width="848" x="0" y="144" rx="2" fill="url(#lifeBar)"/>
 
-  <g class="runner s4"><circle r="7" fill="#92400e"/><path class="tail" d="M-7 0C-20 -9 -22 9 -8 10" stroke="var(--cat)" stroke-width="4" stroke-linecap="round"/></g>
-  <g class="runner s3"><circle r="8" fill="#b45309"/></g>
-  <g class="runner s2"><circle r="9" fill="#d97706"/></g>
-  <g class="runner s1"><circle r="10" fill="var(--cat2)"/></g>
+  <g class="runner body3">
+    <circle r="7" fill="#92400e"/>
+    <path class="tail" d="M-7 0C-20 -9 -22 9 -8 10" stroke="var(--cat)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g class="runner body2"><circle r="8" fill="#b45309"/></g>
+  <g class="runner body1"><circle r="9" fill="#d97706"/></g>
+
   <g class="runner">
     <ellipse cx="0" cy="0" rx="18" ry="15" fill="var(--cat)" stroke="#78350f" stroke-width="2.4"/>
     <path d="M-13 -10L-8 -22L-2 -9Z" fill="var(--cat)" stroke="#78350f" stroke-width="2"/>

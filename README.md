@@ -198,7 +198,6 @@
 - AI-assisted systems for education, monitoring, risk analysis, and decision support.
 - Network engineering labs, cybersecurity practice, and infrastructure documentation.
 - Public repositories as learning records, portfolio proof, and project evolution.
-- Private files stay private: environment keys, local databases, tokens, and unreleased logic.
 
 <div align="center">
   <b>Learning across software, networks, AI, and security. One project at a time.</b>
