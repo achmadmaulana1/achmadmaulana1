@@ -8,21 +8,6 @@ const radius = 2;
 const duration = 52000;
 const consumeEnd = 96;
 
-function snakePath() {
-  const points = [];
-  for (let row = 0; row < rows; row += 1) {
-    if (row % 2 === 0) {
-      for (let col = cols - 1; col >= 0; col -= 1) points.push({ col, row });
-    } else {
-      for (let col = 0; col < cols; col += 1) points.push({ col, row });
-    }
-  }
-  return points;
-}
-
-const path = snakePath();
-const indexByCell = new Map(path.map((p, index) => [`${p.col},${p.row}`, index]));
-
 function x(col) {
   return col * step + 2;
 }
@@ -37,6 +22,10 @@ function cx(col) {
 
 function cy(row) {
   return row * step + 8;
+}
+
+function keyOf(cell) {
+  return `${cell.col},${cell.row}`;
 }
 
 function hash(col, row) {
@@ -58,6 +47,78 @@ function level(col, row) {
   if (h === 42 || h === 77) return 4;
   return 0;
 }
+
+function collectGreenCells() {
+  const cells = [];
+  for (let col = 0; col < cols; col += 1) {
+    for (let row = 0; row < rows; row += 1) {
+      const lv = level(col, row);
+      if (lv > 0) cells.push({ col, row, level: lv });
+    }
+  }
+  return cells;
+}
+
+function distance(a, b) {
+  return Math.abs(a.col - b.col) + Math.abs(a.row - b.row);
+}
+
+function greedyCatRoute(greenCells) {
+  const remaining = new Map(greenCells.map((cell) => [keyOf(cell), cell]));
+  const eatenIndex = new Map();
+  const route = [{ col: cols - 1, row: 0 }];
+  let current = route[0];
+
+  function markCurrent() {
+    const key = keyOf(current);
+    if (remaining.has(key)) {
+      remaining.delete(key);
+      if (!eatenIndex.has(key)) eatenIndex.set(key, route.length - 1);
+    }
+  }
+
+  function pushStep(next) {
+    current = next;
+    route.push(current);
+    markCurrent();
+  }
+
+  function nearestTarget() {
+    let best = null;
+    for (const cell of remaining.values()) {
+      if (!best) {
+        best = cell;
+        continue;
+      }
+      const d = distance(current, cell);
+      const bestD = distance(current, best);
+      const tieBreaker = cell.col > best.col || (cell.col === best.col && cell.row < best.row);
+      if (d < bestD || (d === bestD && tieBreaker)) best = cell;
+    }
+    return best;
+  }
+
+  markCurrent();
+  while (remaining.size > 0) {
+    const target = nearestTarget();
+
+    while (current.col !== target.col) {
+      const dir = target.col > current.col ? 1 : -1;
+      pushStep({ col: current.col + dir, row: current.row });
+    }
+
+    while (current.row !== target.row) {
+      const dir = target.row > current.row ? 1 : -1;
+      pushStep({ col: current.col, row: current.row + dir });
+    }
+  }
+
+  route.push(route[route.length - 1]);
+  return { route, eatenIndex };
+}
+
+const greenCells = collectGreenCells();
+const { route: path, eatenIndex } = greedyCatRoute(greenCells);
 
 function keyframesForCell(name, index, color, empty) {
   const p = (index / (path.length - 1)) * consumeEnd;
@@ -121,7 +182,7 @@ ${pathKeyframes("body3", 3)}
       const id = lv > 0 ? ` g${greenIndex}` : "";
       const fill = lv > 0 ? colors[lv - 1] : empty;
       if (lv > 0) {
-        const pathIndex = indexByCell.get(`${col},${row}`);
+        const pathIndex = eatenIndex.get(`${col},${row}`);
         css += keyframesForCell(`eat${greenIndex}`, pathIndex, fill, empty);
         css += `.g${greenIndex}{fill:${fill};animation:eat${greenIndex} ${duration}ms steps(1,end) infinite}`;
         greenIndex += 1;

@@ -184,7 +184,7 @@
   </p>
 </details>
 
-## Contribution Graph Animation
+## A Cat Eating my Contributions Graph
 
 <p align="center">
   <picture>
