@@ -1,159 +1,149 @@
-<svg width="980" height="220" viewBox="0 0 980 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-16 -32 880 192" width="880" height="192" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root{
+      --cb:#1b1f230a;
+      --ce:#ebedf0;
+      --c1:#9be9a8;
+      --c2:#40c463;
+      --c3:#30a14e;
+      --c4:#216e39;
+      --cat:#fbbf24;
+      --cat2:#f59e0b;
+      --line:#22c55e;
+      --ink:#1f2937;
+    }
+    .c{shape-rendering:geometricPrecision;fill:var(--ce);stroke-width:1px;stroke:var(--cb);width:12px;height:12px}
+    .g1{fill:var(--c1)}.g2{fill:var(--c2)}.g3{fill:var(--c3)}.g4{fill:var(--c4)}
+    .target{animation-duration:36000ms;animation-timing-function:steps(1,end);animation-iteration-count:infinite}
+    .t1{animation-name:e1}.t2{animation-name:e2}.t3{animation-name:e3}.t4{animation-name:e4}.t5{animation-name:e5}.t6{animation-name:e6}.t7{animation-name:e7}.t8{animation-name:e8}.t9{animation-name:e9}.t10{animation-name:e10}.t11{animation-name:e11}.t12{animation-name:e12}.t13{animation-name:e13}.t14{animation-name:e14}.t15{animation-name:e15}.t16{animation-name:e16}.t17{animation-name:e17}.t18{animation-name:e18}.t19{animation-name:e19}.t20{animation-name:e20}.t21{animation-name:e21}.t22{animation-name:e22}.t23{animation-name:e23}.t24{animation-name:e24}
+    @keyframes e1{0%,3.9%{fill:var(--c2)}4%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
+    @keyframes e2{0%,7.9%{fill:var(--c3)}8%,99.4%{fill:var(--ce)}100%{fill:var(--c3)}}
+    @keyframes e3{0%,11.9%{fill:var(--c1)}12%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
+    @keyframes e4{0%,15.9%{fill:var(--c4)}16%,99.4%{fill:var(--ce)}100%{fill:var(--c4)}}
+    @keyframes e5{0%,19.9%{fill:var(--c2)}20%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
+    @keyframes e6{0%,23.9%{fill:var(--c1)}24%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
+    @keyframes e7{0%,27.9%{fill:var(--c3)}28%,99.4%{fill:var(--ce)}100%{fill:var(--c3)}}
+    @keyframes e8{0%,31.9%{fill:var(--c2)}32%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
+    @keyframes e9{0%,35.9%{fill:var(--c4)}36%,99.4%{fill:var(--ce)}100%{fill:var(--c4)}}
+    @keyframes e10{0%,39.9%{fill:var(--c1)}40%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
+    @keyframes e11{0%,43.9%{fill:var(--c2)}44%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
+    @keyframes e12{0%,47.9%{fill:var(--c3)}48%,99.4%{fill:var(--ce)}100%{fill:var(--c3)}}
+    @keyframes e13{0%,51.9%{fill:var(--c1)}52%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
+    @keyframes e14{0%,55.9%{fill:var(--c4)}56%,99.4%{fill:var(--ce)}100%{fill:var(--c4)}}
+    @keyframes e15{0%,59.9%{fill:var(--c2)}60%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
+    @keyframes e16{0%,63.9%{fill:var(--c3)}64%,99.4%{fill:var(--ce)}100%{fill:var(--c3)}}
+    @keyframes e17{0%,67.9%{fill:var(--c1)}68%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
+    @keyframes e18{0%,71.9%{fill:var(--c2)}72%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
+    @keyframes e19{0%,75.9%{fill:var(--c4)}76%,99.4%{fill:var(--ce)}100%{fill:var(--c4)}}
+    @keyframes e20{0%,79.9%{fill:var(--c1)}80%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
+    @keyframes e21{0%,83.9%{fill:var(--c2)}84%,99.4%{fill:var(--ce)}100%{fill:var(--c2)}}
+    @keyframes e22{0%,87.9%{fill:var(--c3)}88%,99.4%{fill:var(--ce)}100%{fill:var(--c3)}}
+    @keyframes e23{0%,91.9%{fill:var(--c1)}92%,99.4%{fill:var(--ce)}100%{fill:var(--c1)}}
+    @keyframes e24{0%,95.9%{fill:var(--c4)}96%,99.4%{fill:var(--ce)}100%{fill:var(--c4)}}
+
+    .runner{animation:catPath 36000ms linear infinite, runnerFade 36000ms linear infinite}
+    .s1{animation-delay:260ms,260ms}.s2{animation-delay:520ms,520ms}.s3{animation-delay:780ms,780ms}.s4{animation-delay:1040ms,1040ms}
+    .tail{animation:tail 850ms ease-in-out infinite;transform-origin:-8px 0}
+    .mouth{animation:chomp 460ms ease-in-out infinite;transform-origin:17px 0}
+    .bar{animation:bar 36000ms linear infinite;transform-origin:0 0}
+    .trail{stroke-dasharray:6 10;animation:trail 36000ms linear infinite}
+    @keyframes catPath{
+      0%,100%{transform:translate(804px,48px)}
+      4%{transform:translate(752px,48px)}
+      8%{transform:translate(752px,96px)}
+      12%{transform:translate(672px,96px)}
+      16%{transform:translate(672px,32px)}
+      20%{transform:translate(592px,32px)}
+      24%{transform:translate(592px,80px)}
+      28%{transform:translate(528px,80px)}
+      32%{transform:translate(528px,16px)}
+      36%{transform:translate(448px,16px)}
+      40%{transform:translate(448px,96px)}
+      44%{transform:translate(368px,96px)}
+      48%{transform:translate(368px,48px)}
+      52%{transform:translate(288px,48px)}
+      56%{transform:translate(288px,112px)}
+      60%{transform:translate(208px,112px)}
+      64%{transform:translate(208px,32px)}
+      68%{transform:translate(128px,32px)}
+      72%{transform:translate(128px,80px)}
+      76%{transform:translate(48px,80px)}
+      80%{transform:translate(48px,16px)}
+      84%{transform:translate(160px,16px)}
+      88%{transform:translate(160px,64px)}
+      92%{transform:translate(320px,64px)}
+      96%{transform:translate(320px,0px)}
+      98%{transform:translate(804px,0px)}
+    }
+    @keyframes runnerFade{0%,96.3%{opacity:1}97%,99.4%{opacity:0}100%{opacity:1}}
+    @keyframes tail{0%,100%{transform:rotate(-16deg)}50%{transform:rotate(18deg)}}
+    @keyframes chomp{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg)}}
+    @keyframes bar{0%{transform:scaleX(1)}96%{transform:scaleX(.08)}100%{transform:scaleX(1)}}
+    @keyframes trail{to{stroke-dashoffset:-260}}
+  </style>
+
   <defs>
-    <pattern id="emptyDays" width="13" height="13" patternUnits="userSpaceOnUse">
-      <rect width="10" height="10" rx="2" fill="#E5E7EB"/>
+    <pattern id="snkGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect class="c" x="2" y="2" rx="2" ry="2"/>
     </pattern>
-    <linearGradient id="lifeBar" x1="42" y1="0" x2="938" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#16A34A"/>
-      <stop offset=".5" stop-color="#4ADE80"/>
-      <stop offset="1" stop-color="#22C55E"/>
+    <linearGradient id="lifeBar" x1="0" y1="0" x2="848" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#216e39"/>
+      <stop offset=".45" stop-color="#40c463"/>
+      <stop offset="1" stop-color="#9be9a8"/>
     </linearGradient>
   </defs>
 
-  <style>
-    .head,.body{animation:catSnake 18s linear infinite, runnerFade 18s linear infinite}
-    .body{filter:drop-shadow(0 2px 0 #78350f)}
-    .b1{animation-delay:.18s,.18s}.b2{animation-delay:.36s,.36s}.b3{animation-delay:.54s,.54s}.b4{animation-delay:.72s,.72s}.b5{animation-delay:.9s,.9s}.b6{animation-delay:1.08s,1.08s}
-    .mouth{animation:chomp .42s ease-in-out infinite; transform-origin:17px 0}
-    .tail-tip{animation:tailTip .75s ease-in-out infinite; transform-origin:-7px 0}
-    .route{stroke-dasharray:7 9; animation:routeMove 18s linear infinite}
-    .target{animation-duration:18s; animation-timing-function:steps(1,end); animation-iteration-count:infinite}
-    .t1{animation-name:e1}.t2{animation-name:e2}.t3{animation-name:e3}.t4{animation-name:e4}.t5{animation-name:e5}.t6{animation-name:e6}.t7{animation-name:e7}.t8{animation-name:e8}.t9{animation-name:e9}.t10{animation-name:e10}.t11{animation-name:e11}.t12{animation-name:e12}.t13{animation-name:e13}.t14{animation-name:e14}.t15{animation-name:e15}.t16{animation-name:e16}.t17{animation-name:e17}.t18{animation-name:e18}.t19{animation-name:e19}.t20{animation-name:e20}
-    .remain{animation:remaining 18s linear infinite; transform-origin:42px 180px}
+  <rect x="0" y="0" width="848" height="112" fill="url(#snkGrid)"/>
 
-    @keyframes catSnake{
-      0%,100%{transform:translate(697px,66px)}
-      2.5%{transform:translate(645px,66px)}
-      5%{transform:translate(645px,118px)}
-      7.5%{transform:translate(593px,118px)}
-      10%{transform:translate(593px,79px)}
-      12.5%{transform:translate(541px,79px)}
-      15%{transform:translate(541px,131px)}
-      17.5%{transform:translate(476px,131px)}
-      20%{transform:translate(476px,92px)}
-      22.5%{transform:translate(424px,92px)}
-      25%{transform:translate(424px,53px)}
-      27.5%{transform:translate(385px,53px)}
-      30%{transform:translate(385px,118px)}
-      32.5%{transform:translate(333px,118px)}
-      35%{transform:translate(333px,79px)}
-      37.5%{transform:translate(281px,79px)}
-      40%{transform:translate(281px,131px)}
-      42.5%{transform:translate(229px,131px)}
-      45%{transform:translate(229px,92px)}
-      47.5%{transform:translate(177px,92px)}
-      50%{transform:translate(177px,53px)}
-      52.5%{transform:translate(125px,53px)}
-      55%{transform:translate(125px,118px)}
-      57.5%{transform:translate(86px,118px)}
-      60%{transform:translate(86px,79px)}
-      62.5%{transform:translate(151px,79px)}
-      65%{transform:translate(151px,66px)}
-      67.5%{transform:translate(268px,66px)}
-      70%{transform:translate(268px,105px)}
-      72.5%{transform:translate(359px,105px)}
-      75%{transform:translate(359px,66px)}
-      77.5%{transform:translate(515px,66px)}
-      80%{transform:translate(515px,53px)}
-      82.5%{transform:translate(671px,53px)}
-      85%{transform:translate(671px,92px)}
-      88%{transform:translate(619px,92px)}
-      91%{transform:translate(619px,53px)}
-      94%{transform:translate(697px,53px)}
-      96%{transform:translate(697px,66px)}
-      98%{transform:translate(697px,66px)}
-    }
-    @keyframes runnerFade{0%,96.5%{opacity:1}97%,99.4%{opacity:0}100%{opacity:1}}
-    @keyframes routeMove{to{stroke-dashoffset:-240}}
-    @keyframes remaining{0%{transform:scaleX(1)}96%{transform:scaleX(.1)}100%{transform:scaleX(1)}}
-    @keyframes chomp{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg)}}
-    @keyframes tailTip{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(18deg)}}
-
-    @keyframes e1{0%,4.9%{fill:#22C55E}5%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e2{0%,9.9%{fill:#22C55E}10%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e3{0%,14.9%{fill:#22C55E}15%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e4{0%,19.9%{fill:#22C55E}20%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e5{0%,24.9%{fill:#22C55E}25%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e6{0%,29.9%{fill:#22C55E}30%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e7{0%,34.9%{fill:#22C55E}35%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e8{0%,39.9%{fill:#22C55E}40%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e9{0%,44.9%{fill:#22C55E}45%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e10{0%,49.9%{fill:#22C55E}50%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e11{0%,54.9%{fill:#22C55E}55%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e12{0%,59.9%{fill:#22C55E}60%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e13{0%,64.9%{fill:#22C55E}65%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e14{0%,69.9%{fill:#22C55E}70%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e15{0%,74.9%{fill:#22C55E}75%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e16{0%,79.9%{fill:#22C55E}80%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e17{0%,84.9%{fill:#22C55E}85%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e18{0%,90.9%{fill:#22C55E}91%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e19{0%,93.9%{fill:#22C55E}94%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e20{0%,95.9%{fill:#22C55E}96%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-  </style>
-
-  <rect width="980" height="220" rx="22" fill="#0D1117"/>
-  <rect x="24" y="22" width="932" height="176" rx="18" fill="#111827" stroke="#263241" stroke-width="2"/>
-
-  <g transform="translate(42 48)">
-    <rect width="676" height="91" fill="url(#emptyDays)" opacity=".96"/>
-    <rect x="676" y="0" width="10" height="10" rx="2" fill="#E5E7EB" opacity=".96"/>
-
-    <g fill="#166534" opacity=".78">
-      <rect x="0" y="13" width="10" height="10" rx="2"/><rect x="13" y="52" width="10" height="10" rx="2"/><rect x="26" y="78" width="10" height="10" rx="2"/><rect x="52" y="0" width="10" height="10" rx="2"/><rect x="65" y="39" width="10" height="10" rx="2"/><rect x="91" y="65" width="10" height="10" rx="2"/><rect x="117" y="13" width="10" height="10" rx="2"/><rect x="143" y="52" width="10" height="10" rx="2"/><rect x="169" y="78" width="10" height="10" rx="2"/><rect x="195" y="26" width="10" height="10" rx="2"/><rect x="208" y="65" width="10" height="10" rx="2"/><rect x="247" y="0" width="10" height="10" rx="2"/><rect x="260" y="39" width="10" height="10" rx="2"/><rect x="299" y="78" width="10" height="10" rx="2"/><rect x="325" y="13" width="10" height="10" rx="2"/><rect x="351" y="52" width="10" height="10" rx="2"/><rect x="390" y="26" width="10" height="10" rx="2"/><rect x="416" y="78" width="10" height="10" rx="2"/><rect x="442" y="13" width="10" height="10" rx="2"/><rect x="455" y="52" width="10" height="10" rx="2"/><rect x="481" y="26" width="10" height="10" rx="2"/><rect x="507" y="65" width="10" height="10" rx="2"/><rect x="533" y="13" width="10" height="10" rx="2"/><rect x="559" y="78" width="10" height="10" rx="2"/><rect x="585" y="0" width="10" height="10" rx="2"/><rect x="611" y="52" width="10" height="10" rx="2"/><rect x="637" y="78" width="10" height="10" rx="2"/><rect x="663" y="26" width="10" height="10" rx="2"/>
-    </g>
-
-    <g fill="#15803D" opacity=".9">
-      <rect x="455" y="0" width="10" height="10" rx="2"/><rect x="455" y="13" width="10" height="10" rx="2"/><rect x="455" y="26" width="10" height="10" rx="2"/><rect x="455" y="39" width="10" height="10" rx="2"/><rect x="455" y="52" width="10" height="10" rx="2"/><rect x="455" y="65" width="10" height="10" rx="2"/><rect x="455" y="78" width="10" height="10" rx="2"/>
-      <rect x="468" y="0" width="10" height="10" rx="2"/><rect x="468" y="13" width="10" height="10" rx="2"/><rect x="468" y="26" width="10" height="10" rx="2"/><rect x="468" y="39" width="10" height="10" rx="2"/><rect x="468" y="52" width="10" height="10" rx="2"/><rect x="468" y="65" width="10" height="10" rx="2"/><rect x="468" y="78" width="10" height="10" rx="2"/>
-      <rect x="481" y="0" width="10" height="10" rx="2"/><rect x="481" y="13" width="10" height="10" rx="2"/><rect x="481" y="26" width="10" height="10" rx="2"/><rect x="481" y="39" width="10" height="10" rx="2"/><rect x="481" y="52" width="10" height="10" rx="2"/><rect x="481" y="65" width="10" height="10" rx="2"/><rect x="481" y="78" width="10" height="10" rx="2"/>
-      <rect x="494" y="0" width="10" height="10" rx="2"/><rect x="494" y="13" width="10" height="10" rx="2"/><rect x="494" y="26" width="10" height="10" rx="2"/><rect x="494" y="39" width="10" height="10" rx="2"/><rect x="494" y="52" width="10" height="10" rx="2"/><rect x="494" y="65" width="10" height="10" rx="2"/><rect x="494" y="78" width="10" height="10" rx="2"/>
-      <rect x="507" y="13" width="10" height="10" rx="2"/><rect x="507" y="26" width="10" height="10" rx="2"/><rect x="507" y="39" width="10" height="10" rx="2"/><rect x="507" y="52" width="10" height="10" rx="2"/><rect x="520" y="26" width="10" height="10" rx="2"/><rect x="520" y="39" width="10" height="10" rx="2"/><rect x="520" y="52" width="10" height="10" rx="2"/>
-    </g>
-
-    <path class="route" d="M655 18H603V70H551V31H499V83H434V44H382V5H343V70H291V31H239V83H187V44H135V5H83V70H44V31H109V18H226V57H317V18H473V5H629V44" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".32"/>
-
-    <g>
-      <rect class="target t1" x="598" y="65" width="10" height="10" rx="2"/>
-      <rect class="target t2" x="546" y="26" width="10" height="10" rx="2"/>
-      <rect class="target t3" x="494" y="78" width="10" height="10" rx="2"/>
-      <rect class="target t4" x="429" y="39" width="10" height="10" rx="2"/>
-      <rect class="target t5" x="377" y="0" width="10" height="10" rx="2"/>
-      <rect class="target t6" x="338" y="65" width="10" height="10" rx="2"/>
-      <rect class="target t7" x="286" y="26" width="10" height="10" rx="2"/>
-      <rect class="target t8" x="234" y="78" width="10" height="10" rx="2"/>
-      <rect class="target t9" x="182" y="39" width="10" height="10" rx="2"/>
-      <rect class="target t10" x="130" y="0" width="10" height="10" rx="2"/>
-      <rect class="target t11" x="78" y="65" width="10" height="10" rx="2"/>
-      <rect class="target t12" x="39" y="26" width="10" height="10" rx="2"/>
-      <rect class="target t13" x="104" y="13" width="10" height="10" rx="2"/>
-      <rect class="target t14" x="221" y="52" width="10" height="10" rx="2"/>
-      <rect class="target t15" x="312" y="13" width="10" height="10" rx="2"/>
-      <rect class="target t16" x="468" y="0" width="10" height="10" rx="2"/>
-      <rect class="target t17" x="624" y="39" width="10" height="10" rx="2"/>
-      <rect class="target t18" x="572" y="39" width="10" height="10" rx="2"/>
-      <rect class="target t19" x="650" y="0" width="10" height="10" rx="2"/>
-      <rect class="target t20" x="650" y="13" width="10" height="10" rx="2"/>
-    </g>
+  <g>
+    <rect class="c g1" x="2" y="2" rx="2" ry="2"/><rect class="c g2" x="18" y="2" rx="2" ry="2"/><rect class="c g1" x="34" y="2" rx="2" ry="2"/><rect class="c" x="50" y="2" rx="2" ry="2"/><rect class="c g3" x="66" y="2" rx="2" ry="2"/><rect class="c" x="82" y="2" rx="2" ry="2"/><rect class="c g1" x="98" y="2" rx="2" ry="2"/><rect class="c g2" x="114" y="2" rx="2" ry="2"/><rect class="c" x="130" y="2" rx="2" ry="2"/><rect class="c g1" x="146" y="2" rx="2" ry="2"/><rect class="c g4" x="162" y="2" rx="2" ry="2"/><rect class="c" x="178" y="2" rx="2" ry="2"/><rect class="c g2" x="194" y="2" rx="2" ry="2"/><rect class="c" x="210" y="2" rx="2" ry="2"/><rect class="c g1" x="226" y="2" rx="2" ry="2"/><rect class="c g3" x="242" y="2" rx="2" ry="2"/><rect class="c g1" x="258" y="2" rx="2" ry="2"/><rect class="c" x="274" y="2" rx="2" ry="2"/><rect class="c g2" x="290" y="2" rx="2" ry="2"/><rect class="c g1" x="306" y="2" rx="2" ry="2"/><rect class="c target t24" x="322" y="2" rx="2" ry="2"/><rect class="c" x="338" y="2" rx="2" ry="2"/><rect class="c g1" x="354" y="2" rx="2" ry="2"/><rect class="c g4" x="370" y="2" rx="2" ry="2"/><rect class="c" x="386" y="2" rx="2" ry="2"/><rect class="c g2" x="402" y="2" rx="2" ry="2"/><rect class="c g1" x="418" y="2" rx="2" ry="2"/><rect class="c" x="434" y="2" rx="2" ry="2"/><rect class="c g3" x="450" y="2" rx="2" ry="2"/><rect class="c" x="466" y="2" rx="2" ry="2"/><rect class="c g1" x="482" y="2" rx="2" ry="2"/><rect class="c g2" x="498" y="2" rx="2" ry="2"/><rect class="c" x="514" y="2" rx="2" ry="2"/><rect class="c g1" x="530" y="2" rx="2" ry="2"/><rect class="c" x="546" y="2" rx="2" ry="2"/><rect class="c g4" x="562" y="2" rx="2" ry="2"/><rect class="c g1" x="578" y="2" rx="2" ry="2"/><rect class="c g2" x="594" y="2" rx="2" ry="2"/><rect class="c" x="610" y="2" rx="2" ry="2"/><rect class="c g1" x="626" y="2" rx="2" ry="2"/><rect class="c g2" x="642" y="2" rx="2" ry="2"/><rect class="c" x="658" y="2" rx="2" ry="2"/><rect class="c g3" x="674" y="2" rx="2" ry="2"/><rect class="c g1" x="690" y="2" rx="2" ry="2"/><rect class="c" x="706" y="2" rx="2" ry="2"/><rect class="c g2" x="722" y="2" rx="2" ry="2"/><rect class="c" x="738" y="2" rx="2" ry="2"/><rect class="c g1" x="754" y="2" rx="2" ry="2"/><rect class="c g3" x="770" y="2" rx="2" ry="2"/><rect class="c g2" x="786" y="2" rx="2" ry="2"/><rect class="c" x="802" y="2" rx="2" ry="2"/><rect class="c g1" x="818" y="2" rx="2" ry="2"/><rect class="c" x="834" y="2" rx="2" ry="2"/>
+    <rect class="c g1" x="2" y="18" rx="2" ry="2"/><rect class="c" x="18" y="18" rx="2" ry="2"/><rect class="c g2" x="34" y="18" rx="2" ry="2"/><rect class="c target t20" x="50" y="18" rx="2" ry="2"/><rect class="c g1" x="66" y="18" rx="2" ry="2"/><rect class="c" x="82" y="18" rx="2" ry="2"/><rect class="c g3" x="98" y="18" rx="2" ry="2"/><rect class="c" x="114" y="18" rx="2" ry="2"/><rect class="c g2" x="130" y="18" rx="2" ry="2"/><rect class="c g1" x="146" y="18" rx="2" ry="2"/><rect class="c" x="162" y="18" rx="2" ry="2"/><rect class="c g2" x="178" y="18" rx="2" ry="2"/><rect class="c target t21" x="162" y="18" rx="2" ry="2"/><rect class="c g1" x="194" y="18" rx="2" ry="2"/><rect class="c" x="210" y="18" rx="2" ry="2"/><rect class="c g2" x="226" y="18" rx="2" ry="2"/><rect class="c g3" x="242" y="18" rx="2" ry="2"/><rect class="c" x="258" y="18" rx="2" ry="2"/><rect class="c g1" x="274" y="18" rx="2" ry="2"/><rect class="c" x="290" y="18" rx="2" ry="2"/><rect class="c g2" x="306" y="18" rx="2" ry="2"/><rect class="c g1" x="322" y="18" rx="2" ry="2"/><rect class="c" x="338" y="18" rx="2" ry="2"/><rect class="c g4" x="354" y="18" rx="2" ry="2"/><rect class="c g2" x="370" y="18" rx="2" ry="2"/><rect class="c" x="386" y="18" rx="2" ry="2"/><rect class="c g1" x="402" y="18" rx="2" ry="2"/><rect class="c" x="418" y="18" rx="2" ry="2"/><rect class="c g2" x="434" y="18" rx="2" ry="2"/><rect class="c g1" x="450" y="18" rx="2" ry="2"/><rect class="c" x="466" y="18" rx="2" ry="2"/><rect class="c g3" x="482" y="18" rx="2" ry="2"/><rect class="c" x="498" y="18" rx="2" ry="2"/><rect class="c g2" x="514" y="18" rx="2" ry="2"/><rect class="c g1" x="530" y="18" rx="2" ry="2"/><rect class="c" x="546" y="18" rx="2" ry="2"/><rect class="c g4" x="562" y="18" rx="2" ry="2"/><rect class="c" x="578" y="18" rx="2" ry="2"/><rect class="c g2" x="594" y="18" rx="2" ry="2"/><rect class="c target t5" x="594" y="18" rx="2" ry="2"/><rect class="c g1" x="610" y="18" rx="2" ry="2"/><rect class="c" x="626" y="18" rx="2" ry="2"/><rect class="c g2" x="642" y="18" rx="2" ry="2"/><rect class="c" x="658" y="18" rx="2" ry="2"/><rect class="c g1" x="674" y="18" rx="2" ry="2"/><rect class="c g3" x="690" y="18" rx="2" ry="2"/><rect class="c" x="706" y="18" rx="2" ry="2"/><rect class="c g2" x="722" y="18" rx="2" ry="2"/><rect class="c" x="738" y="18" rx="2" ry="2"/><rect class="c g1" x="754" y="18" rx="2" ry="2"/><rect class="c g4" x="770" y="18" rx="2" ry="2"/><rect class="c" x="786" y="18" rx="2" ry="2"/><rect class="c g2" x="802" y="18" rx="2" ry="2"/><rect class="c" x="818" y="18" rx="2" ry="2"/><rect class="c g1" x="834" y="18" rx="2" ry="2"/>
   </g>
 
-  <g class="body b6"><circle r="7" fill="#92400E"/><path class="tail-tip" d="M-7 0C-18 -8 -20 8 -8 10" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/></g>
-  <g class="body b5"><circle r="8" fill="#B45309"/></g>
-  <g class="body b4"><circle r="9" fill="#D97706"/></g>
-  <g class="body b3"><circle r="10" fill="#F59E0B"/></g>
-  <g class="body b2"><circle r="11" fill="#FBBF24"/></g>
-  <g class="body b1"><circle r="12" fill="#FCD34D"/></g>
+  <g>
+    <rect class="c target t1" x="754" y="50" rx="2" ry="2"/>
+    <rect class="c target t2" x="754" y="98" rx="2" ry="2"/>
+    <rect class="c target t3" x="674" y="98" rx="2" ry="2"/>
+    <rect class="c target t4" x="674" y="34" rx="2" ry="2"/>
+    <rect class="c target t5" x="594" y="34" rx="2" ry="2"/>
+    <rect class="c target t6" x="594" y="82" rx="2" ry="2"/>
+    <rect class="c target t7" x="530" y="82" rx="2" ry="2"/>
+    <rect class="c target t8" x="530" y="18" rx="2" ry="2"/>
+    <rect class="c target t9" x="450" y="18" rx="2" ry="2"/>
+    <rect class="c target t10" x="450" y="98" rx="2" ry="2"/>
+    <rect class="c target t11" x="370" y="98" rx="2" ry="2"/>
+    <rect class="c target t12" x="370" y="50" rx="2" ry="2"/>
+    <rect class="c target t13" x="290" y="50" rx="2" ry="2"/>
+    <rect class="c target t14" x="290" y="114" rx="2" ry="2"/>
+    <rect class="c target t15" x="210" y="114" rx="2" ry="2"/>
+    <rect class="c target t16" x="210" y="34" rx="2" ry="2"/>
+    <rect class="c target t17" x="130" y="34" rx="2" ry="2"/>
+    <rect class="c target t18" x="130" y="82" rx="2" ry="2"/>
+    <rect class="c target t19" x="50" y="82" rx="2" ry="2"/>
+    <rect class="c target t20" x="50" y="18" rx="2" ry="2"/>
+    <rect class="c target t21" x="162" y="18" rx="2" ry="2"/>
+    <rect class="c target t22" x="162" y="66" rx="2" ry="2"/>
+    <rect class="c target t23" x="322" y="66" rx="2" ry="2"/>
+    <rect class="c target t24" x="322" y="2" rx="2" ry="2"/>
+  </g>
 
-  <g class="head">
-    <ellipse cx="0" cy="0" rx="18" ry="15" fill="#FBBF24" stroke="#78350F" stroke-width="2.4"/>
-    <path d="M-13 -10L-8 -22L-2 -9Z" fill="#FBBF24" stroke="#78350F" stroke-width="2"/>
-    <path d="M9 -9L15 -22L18 -7Z" fill="#FBBF24" stroke="#78350F" stroke-width="2"/>
+  <path class="trail" d="M804 48H752V96H672V32H592V80H528V16H448V96H368V48H288V112H208V32H128V80H48V16H160V64H320V0" fill="none" stroke="var(--line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".32"/>
+
+  <rect class="u" height="12" width="848" x="0" y="144" rx="2" fill="#1f2937"/>
+  <rect class="bar" height="12" width="848" x="0" y="144" rx="2" fill="url(#lifeBar)"/>
+
+  <g class="runner s4"><circle r="7" fill="#92400e"/><path class="tail" d="M-7 0C-20 -9 -22 9 -8 10" stroke="var(--cat)" stroke-width="4" stroke-linecap="round"/></g>
+  <g class="runner s3"><circle r="8" fill="#b45309"/></g>
+  <g class="runner s2"><circle r="9" fill="#d97706"/></g>
+  <g class="runner s1"><circle r="10" fill="var(--cat2)"/></g>
+  <g class="runner">
+    <ellipse cx="0" cy="0" rx="18" ry="15" fill="var(--cat)" stroke="#78350f" stroke-width="2.4"/>
+    <path d="M-13 -10L-8 -22L-2 -9Z" fill="var(--cat)" stroke="#78350f" stroke-width="2"/>
+    <path d="M9 -9L15 -22L18 -7Z" fill="var(--cat)" stroke="#78350f" stroke-width="2"/>
     <circle cx="-6" cy="-2" r="2.3" fill="#111827"/>
     <circle cx="7" cy="-2" r="2.3" fill="#111827"/>
     <path d="M1 4L-3 8H5L1 4Z" fill="#111827"/>
-    <path class="mouth" d="M17 0L31 -7L31 8L17 3Z" fill="#EF4444"/>
-    <path d="M-12 7L-22 11M-12 2L-23 2M13 7L23 11M13 2L24 2" stroke="#78350F" stroke-width="1.6" stroke-linecap="round"/>
+    <path class="mouth" d="M17 0L31 -7L31 8L17 3Z" fill="#ef4444"/>
+    <path d="M-12 7L-22 11M-12 2L-23 2M13 7L23 11M13 2L24 2" stroke="#78350f" stroke-width="1.6" stroke-linecap="round"/>
   </g>
-
-  <rect x="42" y="180" width="896" height="8" rx="4" fill="#1F2937"/>
-  <rect class="remain" x="42" y="180" width="896" height="8" rx="4" fill="url(#lifeBar)"/>
 </svg>
