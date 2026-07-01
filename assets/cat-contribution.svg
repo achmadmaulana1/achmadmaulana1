@@ -11,64 +11,69 @@
   </defs>
 
   <style>
-    .head,.body{animation:snakePath 13.6s linear infinite, runnerFade 13.6s linear infinite}
+    .head,.body{animation:snakePath 14s linear infinite, runnerFade 14s linear infinite}
     .body{filter:drop-shadow(0 2px 0 #78350f)}
-    .b1{animation-delay:-13.44s,-13.44s}.b2{animation-delay:-13.28s,-13.28s}.b3{animation-delay:-13.12s,-13.12s}.b4{animation-delay:-12.96s,-12.96s}.b5{animation-delay:-12.8s,-12.8s}.b6{animation-delay:-12.64s,-12.64s}
+    .b1{animation-delay:-13.72s,-13.72s}
+    .b2{animation-delay:-13.44s,-13.44s}
+    .b3{animation-delay:-13.16s,-13.16s}
+    .b4{animation-delay:-12.88s,-12.88s}
+    .b5{animation-delay:-12.6s,-12.6s}
+    .b6{animation-delay:-12.32s,-12.32s}
     .mouth{animation:chomp .42s ease-in-out infinite; transform-origin:17px 0}
     .tail-tip{animation:tailTip .7s ease-in-out infinite; transform-origin:-7px 0}
-    .route{stroke-dasharray:7 8; animation:routeMove 13.6s linear infinite}
-    .target{animation-duration:13.6s; animation-timing-function:steps(1,end); animation-iteration-count:infinite}
-    .t1{animation-name:e1}.t2{animation-name:e2}.t3{animation-name:e3}.t4{animation-name:e4}.t5{animation-name:e5}.t6{animation-name:e6}.t7{animation-name:e7}.t8{animation-name:e8}.t9{animation-name:e9}.t10{animation-name:e10}.t11{animation-name:e11}.t12{animation-name:e12}.t13{animation-name:e13}.t14{animation-name:e14}.t15{animation-name:e15}.t16{animation-name:e16}
-    .remain{animation:remaining 13.6s steps(16,end) infinite; transform-origin:42px 180px}
-    .pulse{animation:pulse 1.4s ease-in-out infinite}
+    .green-cells{stroke-dasharray:10 3; stroke-dashoffset:0}
+    .eaten-cells{animation:eatRoute 14s linear infinite}
+    .remain{animation:remaining 14s linear infinite; transform-origin:42px 180px}
 
     @keyframes snakePath{
-      0%,100%{transform:translate(619px,53px)}
-      6%{transform:translate(619px,92px)}
-      12%{transform:translate(541px,92px)}
-      18%{transform:translate(541px,66px)}
-      24%{transform:translate(450px,66px)}
-      30%{transform:translate(450px,131px)}
-      36%{transform:translate(372px,131px)}
-      42%{transform:translate(372px,105px)}
-      48%{transform:translate(294px,105px)}
-      54%{transform:translate(294px,66px)}
-      60%{transform:translate(229px,66px)}
-      66%{transform:translate(229px,118px)}
-      72%{transform:translate(151px,118px)}
-      78%{transform:translate(151px,79px)}
-      84%{transform:translate(86px,79px)}
-      90%{transform:translate(86px,53px)}
-      95%{transform:translate(86px,53px)}
-      96%,100%{transform:translate(619px,53px)}
+      0%,100%{transform:translate(723px,53px)}
+      7%{transform:translate(515px,53px)}
+      12%{transform:translate(515px,131px)}
+      15%{transform:translate(528px,131px)}
+      20%{transform:translate(528px,53px)}
+      23%{transform:translate(541px,53px)}
+      28%{transform:translate(541px,131px)}
+      31%{transform:translate(554px,131px)}
+      36%{transform:translate(554px,53px)}
+      39%{transform:translate(567px,53px)}
+      44%{transform:translate(567px,131px)}
+      47%{transform:translate(580px,131px)}
+      52%{transform:translate(580px,53px)}
+      55%{transform:translate(593px,53px)}
+      60%{transform:translate(593px,131px)}
+      63%{transform:translate(606px,131px)}
+      68%{transform:translate(606px,53px)}
+      73%{transform:translate(437px,53px)}
+      76%{transform:translate(437px,105px)}
+      80%{transform:translate(333px,105px)}
+      83%{transform:translate(333px,66px)}
+      87%{transform:translate(229px,66px)}
+      90%{transform:translate(229px,118px)}
+      93%{transform:translate(125px,118px)}
+      95%{transform:translate(125px,79px)}
+      97%{transform:translate(86px,79px)}
+      98%{transform:translate(86px,53px)}
+      99%{transform:translate(86px,53px)}
     }
     @keyframes runnerFade{
-      0%,94.9%{opacity:1}
-      95%,99.5%{opacity:0}
+      0%,98.8%{opacity:1}
+      99%,99.7%{opacity:0}
       100%{opacity:1}
     }
-    @keyframes routeMove{to{stroke-dashoffset:-260}}
+    @keyframes eatRoute{
+      0%{stroke-dasharray:0 1000; stroke-dashoffset:0}
+      98%{stroke-dasharray:1000 0; stroke-dashoffset:0}
+      99.5%{stroke-dasharray:1000 0; stroke-dashoffset:0}
+      100%{stroke-dasharray:0 1000; stroke-dashoffset:0}
+    }
+    @keyframes remaining{
+      0%{transform:scaleX(1)}
+      98%{transform:scaleX(.08)}
+      99.5%{transform:scaleX(.08)}
+      100%{transform:scaleX(1)}
+    }
     @keyframes chomp{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg)}}
     @keyframes tailTip{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(18deg)}}
-    @keyframes remaining{0%{transform:scaleX(1)}100%{transform:scaleX(.08)}}
-    @keyframes pulse{0%,100%{opacity:.65}50%{opacity:1}}
-
-    @keyframes e1{0%,5.8%{fill:#22C55E}6%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e2{0%,11.8%{fill:#22C55E}12%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e3{0%,17.8%{fill:#22C55E}18%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e4{0%,23.8%{fill:#22C55E}24%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e5{0%,29.8%{fill:#22C55E}30%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e6{0%,35.8%{fill:#22C55E}36%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e7{0%,41.8%{fill:#22C55E}42%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e8{0%,47.8%{fill:#22C55E}48%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e9{0%,53.8%{fill:#22C55E}54%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e10{0%,59.8%{fill:#22C55E}60%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e11{0%,65.8%{fill:#22C55E}66%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e12{0%,71.8%{fill:#22C55E}72%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e13{0%,77.8%{fill:#22C55E}78%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e14{0%,83.8%{fill:#22C55E}84%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e15{0%,89.8%{fill:#22C55E}90%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
-    @keyframes e16{0%,94.8%{fill:#22C55E}95%,99.4%{fill:#E5E7EB}100%{fill:#22C55E}}
   </style>
 
   <rect width="980" height="220" rx="22" fill="#0D1117"/>
@@ -78,37 +83,24 @@
     <rect width="676" height="91" fill="url(#emptyDays)" opacity=".96"/>
     <rect x="676" y="0" width="10" height="10" rx="2" fill="#E5E7EB" opacity=".96"/>
 
-    <g fill="#166534" opacity=".8">
-      <rect x="13" y="0" width="10" height="10" rx="2"/><rect x="26" y="26" width="10" height="10" rx="2"/><rect x="52" y="65" width="10" height="10" rx="2"/><rect x="78" y="39" width="10" height="10" rx="2"/><rect x="104" y="13" width="10" height="10" rx="2"/><rect x="130" y="78" width="10" height="10" rx="2"/><rect x="169" y="52" width="10" height="10" rx="2"/><rect x="195" y="0" width="10" height="10" rx="2"/><rect x="260" y="26" width="10" height="10" rx="2"/><rect x="338" y="39" width="10" height="10" rx="2"/><rect x="403" y="13" width="10" height="10" rx="2"/><rect x="468" y="65" width="10" height="10" rx="2"/><rect x="559" y="0" width="10" height="10" rx="2"/><rect x="637" y="52" width="10" height="10" rx="2"/>
-    </g>
-
-    <g fill="#16A34A" opacity=".92">
-      <rect x="455" y="0" width="10" height="10" rx="2"/><rect x="455" y="13" width="10" height="10" rx="2"/><rect x="455" y="26" width="10" height="10" rx="2"/><rect x="455" y="39" width="10" height="10" rx="2"/><rect x="455" y="52" width="10" height="10" rx="2"/><rect x="455" y="65" width="10" height="10" rx="2"/><rect x="455" y="78" width="10" height="10" rx="2"/>
-      <rect x="468" y="0" width="10" height="10" rx="2"/><rect x="468" y="13" width="10" height="10" rx="2"/><rect x="468" y="26" width="10" height="10" rx="2"/><rect x="468" y="39" width="10" height="10" rx="2"/><rect x="468" y="52" width="10" height="10" rx="2"/><rect x="468" y="78" width="10" height="10" rx="2"/>
-      <rect x="481" y="0" width="10" height="10" rx="2"/><rect x="481" y="13" width="10" height="10" rx="2"/><rect x="481" y="39" width="10" height="10" rx="2"/><rect x="481" y="52" width="10" height="10" rx="2"/><rect x="481" y="65" width="10" height="10" rx="2"/>
-      <rect x="494" y="13" width="10" height="10" rx="2"/><rect x="494" y="26" width="10" height="10" rx="2"/><rect x="494" y="39" width="10" height="10" rx="2"/><rect x="494" y="78" width="10" height="10" rx="2"/>
-    </g>
-
-    <path class="route" d="M577 5V44H499V18H408V83H330V57H252V18H187V70H109V31H44V5H577" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".38"/>
-
-    <g fill="#22C55E">
-      <rect class="target t1" x="572" y="0" width="10" height="10" rx="2"/>
-      <rect class="target t2" x="572" y="39" width="10" height="10" rx="2"/>
-      <rect class="target t3" x="494" y="39" width="10" height="10" rx="2"/>
-      <rect class="target t4" x="494" y="13" width="10" height="10" rx="2"/>
-      <rect class="target t5" x="403" y="13" width="10" height="10" rx="2"/>
-      <rect class="target t6" x="403" y="78" width="10" height="10" rx="2"/>
-      <rect class="target t7" x="325" y="78" width="10" height="10" rx="2"/>
-      <rect class="target t8" x="325" y="52" width="10" height="10" rx="2"/>
-      <rect class="target t9" x="247" y="52" width="10" height="10" rx="2"/>
-      <rect class="target t10" x="247" y="13" width="10" height="10" rx="2"/>
-      <rect class="target t11" x="182" y="13" width="10" height="10" rx="2"/>
-      <rect class="target t12" x="182" y="65" width="10" height="10" rx="2"/>
-      <rect class="target t13" x="104" y="65" width="10" height="10" rx="2"/>
-      <rect class="target t14" x="104" y="26" width="10" height="10" rx="2"/>
-      <rect class="target t15" x="39" y="26" width="10" height="10" rx="2"/>
-      <rect class="target t16" x="39" y="0" width="10" height="10" rx="2"/>
-    </g>
+    <path
+      d="M681 5H473V83H486V5H499V83H512V5H525V83H538V5H551V83H564V5H395V57H291V18H187V70H83V31H44V5"
+      class="green-cells"
+      stroke="#22C55E"
+      stroke-width="10"
+      stroke-linecap="butt"
+      stroke-linejoin="miter"
+      pathLength="1000"
+    />
+    <path
+      d="M681 5H473V83H486V5H499V83H512V5H525V83H538V5H551V83H564V5H395V57H291V18H187V70H83V31H44V5"
+      class="eaten-cells"
+      stroke="#E5E7EB"
+      stroke-width="11"
+      stroke-linecap="butt"
+      stroke-linejoin="miter"
+      pathLength="1000"
+    />
   </g>
 
   <g class="body b6"><circle r="7" fill="#92400E"/><path class="tail-tip" d="M-7 0C-18 -8 -20 8 -8 10" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/></g>
