@@ -22,7 +22,7 @@
 
 <img align="right" width="260" src="./assets/coding-orbit.svg" alt="Animated coding workspace" />
 
-- I am an **Informatics student** at the **Faculty of Science and Technology**, **UIN Sultan Maulana Hasanuddin Banten**, focused on turning ideas into useful digital systems across software engineering, network engineering, AI, and cybersecurity.
+- I am an **Informatics student** at the **Faculty of Science and Technology**, **UIN Sultan Maulana Hasanuddin Banten**, growing at the intersection of software engineering, networks, AI, and cybersecurity.
 - I explore software engineering, network engineering, artificial intelligence, cybersecurity, and product design.
 - I like building projects that solve real problems, not only static demos.
 - I am currently improving my fullstack, AI, network security, database, and UI/UX engineering skills.
